@@ -1,0 +1,8 @@
+#!/bin/bash
+root=$(dirname "$0")
+
+# Create a symbolic link for vim configuration
+declare vimrc=~/.vimrc 
+[ -f $vimrc ] || [ -L $vimrc ] && rm $vimrc
+ln -rs $root/vim/.vimrc $vimrc
+[ $? == 0 ] && echo "${vimrc} symlink created."
