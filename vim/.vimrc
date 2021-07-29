@@ -36,7 +36,7 @@ set scrolloff=8
 set signcolumn=yes
 " Set a guideline in the right
 set colorcolumn=100
-" highlight ColorColumn ctermbg=lightcyan guibg=blue
+highlight ColorColumn ctermbg=lightcyan guibg=blue
 
 " Highlight results as we search
 set incsearch
@@ -62,6 +62,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
+Plug 'tpope/vim-commentary'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -95,3 +96,6 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
