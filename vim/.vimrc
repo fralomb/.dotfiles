@@ -18,7 +18,7 @@ set tabstop=2 softtabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
-set nu
+set nu rnu
 " No wrapping the line
 set nowrap
 " Only works with ignorecase option. Overrride the ignorecase option if the
