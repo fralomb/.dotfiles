@@ -33,8 +33,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Git
 Plug 'tpope/vim-fugitive'
 
-" Code Highlighting
+" Tree-sitter - code highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Use treesitter to autoclose and autorename html tag
+Plug 'windwp/nvim-ts-autotag'
 call plug#end()
 
 let mapleader = " "
