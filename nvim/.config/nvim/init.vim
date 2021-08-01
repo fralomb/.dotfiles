@@ -25,6 +25,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'neovim/nvim-lspconfig'
+
+" File Explorer
+Plug 'preservim/nerdtree'
 call plug#end()
 
 let mapleader = " "
