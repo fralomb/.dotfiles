@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Create symlink for nvim config
+declare home=~/
+declare root=$(dirname "$0")
+# delete if a symlink already exist
+stow --target=$home --dir=$root -D nvim
+# create symlink for nvim config
+stow --target=$home --dir=$root nvim
+[ $? == 0 ] && echo "${root}/nvim symlink created."

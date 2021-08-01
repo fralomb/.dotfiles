@@ -64,8 +64,14 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-commentary'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" fzf deps
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+
+" Telescope deps
+" Plug 'nvim-lua/popup.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -97,5 +103,10 @@ nnoremap <leader>ps :Rg<SPACE>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 
+" Move Visual blocks with J and K
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Keep Visual Mode after indenting with > or <
+vmap < <gv
+vmap > >gv
