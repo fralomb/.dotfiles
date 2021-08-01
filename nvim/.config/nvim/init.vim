@@ -32,6 +32,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Git
 Plug 'tpope/vim-fugitive'
+
+" Code Highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 let mapleader = " "
