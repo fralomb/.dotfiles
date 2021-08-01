@@ -28,6 +28,10 @@ Plug 'neovim/nvim-lspconfig'
 
 " File Explorer
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Git
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 let mapleader = " "
