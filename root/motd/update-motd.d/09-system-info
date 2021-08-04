@@ -1,0 +1,50 @@
+#!/bin/bash
+let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
+let secs=$((${upSeconds}%60))
+let mins=$((${upSeconds}/60%60))
+let hours=$((${upSeconds}/3600%24))
+let days=$((${upSeconds}/86400))
+UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
+
+function bytes_for_humans {
+    read bytes
+    echo $bytes
+    if [[ $bytes -lt 1024 ]]; then
+        echo "${bytes}B"
+        return
+    fi
+    kb=$(((bytes+512)/1024))
+    if [[ $kb -lt 1024 ]]; then
+        echo "${kb}KiB"
+        return
+    fi
+    mb=$(((bytes+512)/1024))
+    if [[ $mb -lt 1024 ]]; then
+        echo "${mb}MiB"
+        return
+    fi
+    gb=$(((mb+512)/1024))
+    if [[ $gb -lt 1024 ]]; then
+        echo "${gb}GiB"
+        return
+    fi
+}
+
+# get the load averages
+read one five fifteen rest < /proc/loadavg
+
+echo "$(tput setaf 2)
+   .~~.   .~~.    `date +"%A, %e %B %Y, %r"`
+  '. \ ' ' / .'   `uname -srmo`$(tput setaf 1)
+   .~ .~~~..~.
+  : .~.'~'.~. :   Uptime.............: ${UPTIME}
+ ~ (   ) (   ) ~  RAM in use.........: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`KB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`KB (Total)
+( : '~'.~.'~' : ) Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)
+ ~ .~ (   ) ~. ~  Running Processes..: `ps ax | wc -l | tr -d " "`
+  (  : '~' :  )   IP Address.........: `/sbin/ifconfig eth0 | /bin/grep 'inet ' | /bin/cut -d: -f2 | /bin/awk '{print $2}'`
+   '~ .~~~. ~'    Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|FR|Antibes" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`
+       '~'        Temperature........: `vcgencmd measure_temp | awk 'BEGIN {FS="="} {print $2}' | awk 'BEGIN {FS="'\''"} {print $1"°C"}'`
+                  Disk space.........: `df -h | grep /dev/root | awk '{print $5}'`
+$(tput sgr0)"
+
+# Free Disk Space....: `df -Pk | grep -E '^/dev/sda1' | awk '{ print $4 }' | aw

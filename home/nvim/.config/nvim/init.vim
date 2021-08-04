@@ -55,3 +55,6 @@ nnoremap <silent> <leader>- :vertical resize -5<CR>
 vmap < <gv
 vmap > >gv
 
+" remap for toggle terminal
+nnoremap <leader>ton :terminal<CR>
+tnoremap <Esc> <C-\><C-N>
