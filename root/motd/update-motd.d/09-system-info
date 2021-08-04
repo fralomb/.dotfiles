@@ -44,7 +44,7 @@ echo "$(tput setaf 2)
   (  : '~' :  )   IP Address.........: `/sbin/ifconfig eth0 | /bin/grep 'inet ' | /bin/cut -d: -f2 | /bin/awk '{print $2}'`
    '~ .~~~. ~'    Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|FR|Antibes" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`
        '~'        Temperature........: `vcgencmd measure_temp | awk 'BEGIN {FS="="} {print $2}' | awk 'BEGIN {FS="'\''"} {print $1"°C"}'`
-                  Disk space.........: `df -h | grep /dev/root | awk '{print $5}'`
+                  Used disk space....: `df -h | grep /dev/root | awk '{print $5}'`
 $(tput sgr0)"
 
 # Free Disk Space....: `df -Pk | grep -E '^/dev/sda1' | awk '{ print $4 }' | aw
