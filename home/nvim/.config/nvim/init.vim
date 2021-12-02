@@ -35,8 +35,27 @@ Plug 'tpope/vim-fugitive'
 
 " Tree-sitter - code highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 " Use treesitter to autoclose and autorename html tag
 Plug 'windwp/nvim-ts-autotag'
+" Install configuration for LSP - language server client
+Plug 'neovim/nvim-lspconfig'
+" completion engine
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+" Snippet engine
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+"Plug 'onsails/lspkind-nvim'
+" autocompletion, static analysis and refactoring library for Python
+Plug 'ycm-core/YouCompleteMe'
+
+" Harpoon
+Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 let mapleader = " "
