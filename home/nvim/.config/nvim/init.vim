@@ -33,6 +33,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Git
 Plug 'tpope/vim-fugitive'
 
+
 " Tree-sitter - code highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
@@ -56,6 +57,10 @@ Plug 'ycm-core/YouCompleteMe'
 " Harpoon
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'ThePrimeagen/harpoon'
+
+" Java and debugger
+Plug 'mfussenegger/nvim-jdtls'
+Plug 'mfussenegger/nvim-dap'
 call plug#end()
 
 let mapleader = " "

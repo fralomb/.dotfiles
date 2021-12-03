@@ -34,3 +34,9 @@ All my configuration files
 ----- `sudo apt-get install -y build-essential cmake vim-nox python3-dev python3-pip`
 ----- `sudo apt-get install -y mono-complete golang nodejs default-jdk npm`
 ----- `cd ~/.vim/plugged/YouCompleteMe`
+-- Java language server
+--- `https://github.com/mfussenegger/nvim-jdtls`
+--- `https://github.com/eclipse/eclipse.jdt.ls#installation`
+--- `https://github.com/mfussenegger/nvim-dap`
+--- `https://github.com/microsoft/vscode-java-test`
+--- apt-get install -y maven
