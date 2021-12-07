@@ -20,23 +20,22 @@ All my configuration files
 ### language servers
 - `TSInstall bash, javascript, python, etc...`
 - bash language server
-  - install npm before
-    `sudo apt-get install nodejs`
+  - install npm before `sudo apt-get install nodejs`
   - `npm i -g bash-language-server`
 - python language server
-  --> `https://github.com/palantir/python-language-server`
-  --> install jedi -- `https://github.com/davidhalter/jedi`
+  - `https://github.com/palantir/python-language-server`
+  - install jedi -- `https://github.com/davidhalter/jedi`
 - Java language server
-  --> `https://github.com/mfussenegger/nvim-jdtls`
-  --> `https://github.com/eclipse/eclipse.jdt.ls#installation`
-  --> `https://github.com/mfussenegger/nvim-dap`
-  --> `https://github.com/microsoft/vscode-java-test`
-  --> `apt-get install -y maven`
-  --> `apt-get install -y openjdk-8-jdk`
+  - `https://github.com/mfussenegger/nvim-jdtls`
+  - `https://github.com/eclipse/eclipse.jdt.ls#installation`
+  - `https://github.com/mfussenegger/nvim-dap`
+  - `https://github.com/microsoft/vscode-java-test`
+  - `apt-get install -y maven`
+  - `apt-get install -y openjdk-8-jdk`
 ### vim-cmp
-  TODO
+Follow configuration here: `https://github.com/hrsh7th/nvim-cmp`
 ### YouCompleteMe
-  --> `https://github.com/ycm-core/YouCompleteMe#linux-64-bit`
+- `https://github.com/ycm-core/YouCompleteMe#linux-64-bit`
 ## Telescope
 - `apt-get install ripgrep`
 ## Harpoon
