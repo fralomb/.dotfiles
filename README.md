@@ -20,9 +20,9 @@ All my configuration files
 ### language servers
 - `TSInstall bash, javascript, python, etc...`
 - bash language server
-  --> install npm before
-      `sudo apt-get install nodejs`
-  --> `npm i -g bash-language-server`
+  - install npm before
+    `sudo apt-get install nodejs`
+  - `npm i -g bash-language-server`
 - python language server
   --> `https://github.com/palantir/python-language-server`
   --> install jedi -- `https://github.com/davidhalter/jedi`
