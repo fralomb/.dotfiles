@@ -32,6 +32,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 
 " Tree-sitter - code highlight
@@ -61,6 +62,9 @@ Plug 'ThePrimeagen/harpoon'
 " Java and debugger
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'mfussenegger/nvim-dap'
+
+" Markdown preview
+Plug 'ellisonleao/glow.nvim'
 call plug#end()
 
 let mapleader = " "

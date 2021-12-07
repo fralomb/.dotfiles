@@ -16,3 +16,9 @@ vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
 " This requires java-debug and vscode-java-test bundles, see install steps in this README further below.
 nnoremap <leader>df <Cmd>lua require'jdtls'.test_class()<CR>
 nnoremap <leader>dn <Cmd>lua require'jdtls'.test_nearest_method()<CR>
+
+command! -buffer JdtCompile lua require('jdtls').compile()
+command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()
+command! -buffer JdtJol lua require('jdtls').jol()
+command! -buffer JdtBytecode lua require('jdtls').javap()
+command! -buffer JdtJshell lua require('jdtls').jshell()

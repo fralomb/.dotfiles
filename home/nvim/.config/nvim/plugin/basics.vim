@@ -49,3 +49,5 @@ set incsearch
 
 " Not allow the cursor to change
 set guicursor=
+
+set list listchars=tab:»·,trail:· ",eol:¶

@@ -64,4 +64,7 @@ lua <<EOF
   require('lspconfig')['bashls'].setup {
     capabilities = capabilities
   }
+  require('lspconfig')['jedi_language_server'].setup {
+    capabilities = capabilities
+  }
 EOF
