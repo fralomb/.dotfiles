@@ -40,6 +40,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 " Use treesitter to autoclose and autorename html tag
 Plug 'windwp/nvim-ts-autotag'
+" toolkit for html / css
+Plug 'mattn/emmet-vim'
+
 " Install configuration for LSP - language server client
 Plug 'neovim/nvim-lspconfig'
 " completion engine

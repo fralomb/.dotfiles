@@ -46,3 +46,7 @@ Follow configuration here: `https://github.com/hrsh7th/nvim-cmp`
 ## Git
 - `apt-get install git`
 - `https://github.com/airblade/vim-gitgutter`
+## HTML/CSS
+- Emmet toolkit for html, css and javascript development
+- `https://github.com/mattn/emmet-vim`
+- `https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL`
