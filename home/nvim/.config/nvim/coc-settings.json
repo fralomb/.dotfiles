@@ -1,0 +1,24 @@
+{
+  "java.home": "/usr/lib/jvm/default-java",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/usr/lib/jvm/java-8-openjdk-amd64"
+    },
+    {
+      "name": "JavaSE-8",
+      "path": "/usr/lib/jvm/java-8-openjdk-amd64"
+    },
+    {
+      "name": "JavaSE-11",
+      "path": "/usr/lib/jvm/java-11-openjdk-amd64",
+      "default": true
+    }
+  ],
+  "codeLens.enable": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.trace.server": "verbose",
+  "java.format.enabled": true,
+  "java.import.maven.enabled": true,
+  "java.maven.downloadSources": true
+}

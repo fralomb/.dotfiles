@@ -43,20 +43,11 @@ Plug 'windwp/nvim-ts-autotag'
 " toolkit for html / css
 Plug 'mattn/emmet-vim'
 
-" Install configuration for LSP - language server client
-Plug 'neovim/nvim-lspconfig'
-" completion engine
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-" Snippet engine
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-"Plug 'onsails/lspkind-nvim'
 " autocompletion, static analysis and refactoring library for Python
 Plug 'ycm-core/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Syntax highlighting for JSON
+Plug 'kevinoid/vim-jsonc'
 
 " Harpoon
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!

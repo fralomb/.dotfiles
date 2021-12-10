@@ -33,6 +33,3 @@ let g:compe.source.vsnip = v:true
 let g:compe.source.ultisnips = v:true
 let g:compe.source.luasnip = v:true
 
-lua << EOF
-require'lspconfig'.jedi_language_server.setup{}
-EOF
