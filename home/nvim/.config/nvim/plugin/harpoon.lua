@@ -22,6 +22,13 @@ require("harpoon").setup({
                 "httpwatcher -p 8080"
             }
         }
+    },
+    ["$HOME/personal/training/natours"] = {
+        term = {
+            cmds = {
+                "httpwatcher -p 8080"
+            }
+        }
     }
   }
 })

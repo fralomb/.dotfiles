@@ -44,7 +44,7 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'mattn/emmet-vim'
 
 " autocompletion, static analysis and refactoring library for Python
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Syntax highlighting for JSON
 Plug 'kevinoid/vim-jsonc'
@@ -59,6 +59,7 @@ Plug 'mfussenegger/nvim-dap'
 
 " Markdown preview
 Plug 'ellisonleao/glow.nvim'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 let mapleader = " "
@@ -68,6 +69,10 @@ let g:ctrlp_use_caching=0
 
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>b :ls<CR>:b<space>
+nnoremap <leader>bd :ls<CR>:bd<space>
+nnoremap <leader>[ :bprev<CR>
+nnoremap <leader>] :bnext<CR>
 
 " resize vertical panes
 nnoremap <silent> <leader>+ :vertical resize +5<CR>

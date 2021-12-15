@@ -1,5 +1,5 @@
 " install extensions
-let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-emmet', 'coc-css', 'coc-tsserver', 'coc-snippets', 'coc-vimlsp', 'coc-java']
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-emmet', 'coc-css', 'coc-tsserver', 'coc-snippets', 'coc-vimlsp', 'coc-java', 'coc-pyright']
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.

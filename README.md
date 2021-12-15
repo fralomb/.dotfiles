@@ -50,3 +50,10 @@ Follow configuration here: `https://github.com/hrsh7th/nvim-cmp`
 - Emmet toolkit for html, css and javascript development
 - `https://github.com/mattn/emmet-vim`
 - `https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL`
+
+# Kubernetes
+## Install kubectl
+Follow official installation guide: [guide](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+## Install `kube-ps1` (for tmux)
+Repo: https://github.com/jonmosco/kube-tmux
+
