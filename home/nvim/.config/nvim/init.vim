@@ -60,6 +60,9 @@ Plug 'mfussenegger/nvim-dap'
 " Markdown preview
 Plug 'ellisonleao/glow.nvim'
 Plug 'ap/vim-css-color'
+
+" syntax highlighting for justfiles
+Plug 'NoahTheDuke/vim-just'
 call plug#end()
 
 let mapleader = " "

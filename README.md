@@ -56,4 +56,5 @@ Follow configuration here: `https://github.com/hrsh7th/nvim-cmp`
 Follow official installation guide: [guide](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 ## Install `kube-ps1` (for tmux)
 Repo: https://github.com/jonmosco/kube-tmux
-
+## Install `kubectx` and `kubens`
+Repo: https://github.com/ahmetb/kubectx

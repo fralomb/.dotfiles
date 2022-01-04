@@ -16,6 +16,13 @@ require("harpoon").setup({
     excluded_filetypes = { "harpoon" }
   },
   projects = {
+    ["$HOME/personal/ourwedding"] = {
+        term = {
+            cmds = {
+                "ng serve --open"
+            }
+        }
+    },
     ["$HOME/personal/wedding"] = {
         term = {
             cmds = {

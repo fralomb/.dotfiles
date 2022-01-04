@@ -1,5 +1,6 @@
 " install extensions
-let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-emmet', 'coc-css', 'coc-tsserver', 'coc-snippets', 'coc-vimlsp', 'coc-java', 'coc-pyright']
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-emmet', 'coc-css', 'coc-tsserver', 'coc-snippets', 'coc-vimlsp', 'coc-java', 'coc-pyright', 'coc-groovy', 'coc-angular']
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
