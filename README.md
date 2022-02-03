@@ -1,5 +1,5 @@
 # .dotfiles
-All my configuration files
+All the `.dotfiles` needed to configure a machine with my tools 
 
 # Requirements
 - stow

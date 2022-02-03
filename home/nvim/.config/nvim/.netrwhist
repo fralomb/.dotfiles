@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/pi/workspace/.dotfiles'
-let g:netrw_dirhist_2='/home/pi/workspace/.dotfiles/nvim'
-let g:netrw_dirhist_3='/home/pi/workspace/.dotfiles/nvim/.config'
-let g:netrw_dirhist_4='/home/pi/workspace/.dotfiles/nvim/.config/nvim'
-let g:netrw_dirhist_5='/home/pi/workspace/.dotfiles/nvim/.config/nvim/plugin'
