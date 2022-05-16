@@ -10,3 +10,6 @@ vnoremap K :m '<-2<CR>gv=gv
 " Keep Visual Mode after indenting with > or <
 vmap < <gv
 vmap > >gv
+
+" Escape key
+tnoremap <Esc> <C-\><C-N>
