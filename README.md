@@ -5,6 +5,8 @@ All the `.dotfiles` needed to configure a machine with my tools
 - stow
 - vim
 - neovim
+- git
+- zsh
 
 
 # Plugin dependencies
