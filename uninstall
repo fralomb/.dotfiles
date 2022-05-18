@@ -22,11 +22,9 @@ create_symlink() {
   [ -z $folder ] && echo "Invalid folder path." && return
   local foldername=$(basename $folder)
 
-  echo "Creating symlink for ${foldername}.."
+  echo "Removing symlink for ${foldername}.."
   # delete if a symlink already exist
   stow --target=$target --dir=$root -D $foldername
-  # create symlink
-  stow --target=$target --dir=$root $foldername
   [ $? -ne 0 ] && echo "Failed." && return
 }
 
