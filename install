@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # WARNING: need stow to work
 # Check stow is installed
 which stow > /dev/null 2>&1
@@ -19,7 +21,7 @@ declare root="$(dirname "$0")/$1"
 # Stow a file in the target directory
 create_symlink() {
   local folder=${1:-NULL}
-  [ -z $folder ] && echo "Invalid folder path." && return
+  [ -z $folder ] && echo "Invalid folder path." && return 1
   local foldername=$(basename $folder)
 
   echo "Creating symlink for ${foldername}.."
@@ -27,7 +29,8 @@ create_symlink() {
   stow --target=$target --dir=$root -D $foldername
   # create symlink
   stow --target=$target --dir=$root $foldername
-  [ $? -ne 0 ] && echo "Failed." && return
+  [ $? -ne 0 ] && echo "Failed." && return 1
+  return 0
 }
 
 
