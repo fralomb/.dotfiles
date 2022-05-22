@@ -1,0 +1,57 @@
+#!/bin/bash
+
+set -e
+
+# WARNING: need stow to work
+# Check stow is installed
+which stow > /dev/null 2>&1
+[[ $? -ne 0 ]] && echo "[ WARNING ] - You need to install stow first.." && exit 1
+
+# Input expected: Parent folder from where to stow files
+#                 Each folder is tied to a specific target location
+[[ -z "$1" || -n "$1" && !( "$1" = "install" || "$1" = "uninstall" ) ]] && echo "Specify type of operation [ install / uninstall ]." && exit 1
+[[ -z "$2" ]] && echo "Parent folder required." && exit 1
+[[ -z "$3" ]] && echo "Target folder not specified. Using default path"
+
+declare operation="$1"
+# Using default target to stow files (if no .target file is specified inside each folder)
+declare default_target=${3:-$HOME}
+# Current path of execution of the script
+declare root="$(dirname "$0")/$2"
+[[ ! -d "$root" ]] && echo "Parent folder does not exist." && exit 1
+
+# Stow a file in the target directory
+create_symlink() {
+  local folder=${1:-NULL}
+  [[ -z $folder ]] && echo "Invalid folder path." && return 1
+  local target=""
+  if [[ -f $folder/.target ]]; then
+    target=$(cat $folder/.target)
+    echo "Using local target '$target'"
+  else
+    target=$default_target
+    echo "Using default target '$target'"
+  fi
+
+  local foldername=$(basename $folder)
+
+  echo "Creating symlink for ${foldername}.."
+  # delete if a symlink already exist
+  verbose_opt=""
+  [[ "$operation" == "uninstall" ]] && verbose_opt+="--verbose "
+  stow $verbose_opt --ignore=".target" --target=$target --dir=$root -D $foldername
+  if [[ "$operation" == "install" ]]; then
+    # create symlink
+    stow --verbose --ignore=".target" --target=$target --dir=$root $foldername
+    [[ $? -ne 0 ]] && echo "Failed." && return 1
+  fi
+  return 0
+}
+
+
+# Create a bunch of symlinks
+for folder in $(ls -d -- $root/*)
+do
+  create_symlink $folder
+done
+

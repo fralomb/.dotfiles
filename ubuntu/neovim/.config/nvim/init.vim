@@ -1,6 +1,6 @@
 " Install vim-plug if not found
 "let data_dir = has('nvim') ? '~/.config/nvim' : '~/.vim'
-let data_dir = $HOME . '/.local/environments/.neovim'
+let data_dir = $ENVSPATH . '/.neovim/runtime'
 if empty(glob(data_dir . '/autoload/plug.vim'))
     silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
