@@ -20,12 +20,10 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-commentary'
 
-"" Telescope deps
-"Plug 'nvim-lua/popup.nvim'
-"Plug 'nvim-lua/plenary.nvim'
-"Plug 'nvim-telescope/telescope.nvim'
-"
-"Plug 'neovim/nvim-lspconfig'
+" Telescope deps
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " File Explorer
 Plug 'preservim/nerdtree'
