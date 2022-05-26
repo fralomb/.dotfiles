@@ -15,7 +15,7 @@ setopt prompt_subst
 
 # format our main prompt for hostname current folder, and permissions.
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
-PROMPT='%{$fg_bold[green]%}➜%{$fg_bold[green]%} %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$reset_color%}'
+PROMPT='%{$fg_bold[green]%}➜ (%n) %{$fg_bold[green]%} %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
