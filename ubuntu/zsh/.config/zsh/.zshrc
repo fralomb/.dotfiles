@@ -1,10 +1,5 @@
-
-# History in cache directory:
-HISTSIZE=10000000
-SAVEHIST=10000000
-HISTFILE="${ENVSPATH:-$HOME/.cache}/.zsh/history"
-
 # more options: man zshoptions - options are case insentive and underscores are ignored
+setopt share_history
 setopt append_history
 setopt nomatch
 setopt menu_complete
@@ -19,8 +14,10 @@ zmodload zsh/complist
 # compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# Colors
-autoload -Uz colors && colors
+# autoload -U up-line-or-beginning-search
+# autoload -U down-line-or-beginning-search
+# zle -N up-line-or-beginning-search
+# zle -N down-line-or-beginning-search
 
 # import all utility functions
 for config_file ("$ZDOTDIR"/lib/*.zsh); do
@@ -28,4 +25,12 @@ for config_file ("$ZDOTDIR"/lib/*.zsh); do
 done
 
 # source other configurations
-zsh_add_file "prompt.zsh"
+zsh_add_file "config/prompt.zsh"
+zsh_add_file "config/aliases.zsh"
+zsh_add_file "config/key-bindings.zsh"
+zsh_add_file "config/fzf.zsh"
+
+# add plugins
+zsh_add_plugin "zsh-users/zsh-autosuggestions" "$ZSH_MAINDIR"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting" "$ZSH_MAINDIR"
+
