@@ -1,12 +1,22 @@
 # .dotfiles
 All the `.dotfiles` needed to configure a machine with my tools 
 
+# How it works
+The `symlinks` script will simply create / destroy a set bunch of symlinks.
+```
+  ./symlinks <install/uninstall> <parent-folder> [target-folder]
+```
+- `<install/uninstall>`: type of operation to perform; will create the symlinks or destroy the symlinks previously created.
+- `<parent-folder>`: the folder from this repository from where look from files or directories to stow
+- `[target-folder]`: Optionally, it is possible to choose where to stow the all te files and directories. By default, `$HOME` will be used.
+
 # Requirements
 - stow
 - vim
 - neovim
 - git
 - zsh
+- tmux
 
 
 # Plugin dependencies
@@ -52,3 +62,7 @@ Follow configuration here: `https://github.com/hrsh7th/nvim-cmp`
 - Emmet toolkit for html, css and javascript development
 - `https://github.com/mattn/emmet-vim`
 - `https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL`
+## ZSH
+`https://wiki.archlinux.org/title/zsh#History_search`
+# fzf
+`https://github.com/unixorn/fzf-zsh-plugin`

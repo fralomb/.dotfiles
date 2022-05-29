@@ -1,5 +1,6 @@
 export ENVSPATH="$HOME/.environments"
 export ZDOTDIR="$HOME/.config/zsh"
+
 export EDITOR="nvim"
 export TERMINAL="kitty"
 

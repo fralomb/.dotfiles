@@ -33,4 +33,5 @@ zsh_add_file "config/fzf.zsh"
 # add plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions" "$ZSH_MAINDIR"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting" "$ZSH_MAINDIR"
+# zsh_add_plugin "unixorn/fzf-zsh-plugin" "$ZSH_MAINDIR"
 
